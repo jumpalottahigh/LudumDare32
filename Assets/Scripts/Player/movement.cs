@@ -3,15 +3,15 @@ using System.Collections;
 
 public class movement : MonoBehaviour {
 
-	public float speed = 25f;
-	public float jumpSpeed = 25f;
-	public float fallSpeed = -0.08f;
+	public float speed = 35f;
+	public float jumpForce = 600f;
+	public Rigidbody rb;
 
-	public bool jumping = false;
+	public bool grounded = true;
 
 	// Use this for initialization
 	void Start () {
-
+		rb = GetComponent<Rigidbody> ();
 	}
 	
 	// Update is called once per frame
@@ -19,26 +19,31 @@ public class movement : MonoBehaviour {
 
 		//Move forward and back
 		float moveBF = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
-		float moveUD = Input.GetAxis ("Vertical") * jumpSpeed * Time.deltaTime;
+		//float moveUD = Input.GetAxis ("Vertical") * jumpSpeed * Time.deltaTime;
 
 		if(moveBF != 0)
 			transform.Translate (moveBF, 0, 0);
 
-		if (transform.position.y > 1.5f) {
-			transform.Translate (0, -0.18f, 0);
+
+		//Add force to jump
+		if (Input.GetButtonDown ("Jump")) {
+			if(grounded){
+				rb.AddRelativeForce(transform.up * jumpForce);
+			} 
 		}
 
-		if (moveUD > 0) {
-			if (transform.position.y < 8f) {
-				transform.Translate (0, moveUD, 0);
-			}
+		//If in air add extra force down
+		if (transform.position.y > 8f) {
+
 		}
 
-
-
-	
-
-
+		//Ground the player if y position is exactly ground level
+		if ((transform.position.y >= 1.5f && transform.position.y < 2.5f) || (transform.position.y < 7.5f && transform.position.y >= 6.5f)) {
+			grounded = true;
+		} else {
+			grounded = false;
+			rb.AddRelativeForce(transform.up * (-5f));
+		}
 
 	}
 }
