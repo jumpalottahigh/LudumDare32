@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11491978}
   - 54: {fileID: 5404610}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerOld
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,7 +184,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137264}
-  m_Material: {fileID: 13400000, guid: ce6db8749973a9f499ffc338a8619c2a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .5
