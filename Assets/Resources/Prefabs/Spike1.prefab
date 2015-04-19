@@ -10,9 +10,11 @@ GameObject:
   - 4: {fileID: 430276}
   - 33: {fileID: 3334312}
   - 23: {fileID: 2399140}
+  - 136: {fileID: 13656756}
+  - 114: {fileID: 11478238}
   m_Layer: 0
   m_Name: Spike1
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 127582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,6 +62,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127582}
   m_Mesh: {fileID: 4300000, guid: 4b74afb04bfddbd44901dac4a5b240a2, type: 3}
+--- !u!114 &11478238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98d5dc25caeeb74ea798c3f5169b015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &13656756
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .196961537
+  m_Height: 2.20075631
+  m_Direction: 1
+  m_Center: {x: -.0019018501, y: -1.10259068, z: -.00603073835}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

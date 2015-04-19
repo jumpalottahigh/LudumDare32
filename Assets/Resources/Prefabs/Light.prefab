@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 460358}
   - 108: {fileID: 10890572}
-  - 114: {fileID: 11474590}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -61,17 +60,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11474590
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eb4f4b71aa9ee3479752aed593d96b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

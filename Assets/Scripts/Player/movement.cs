@@ -7,6 +7,10 @@ public class movement : MonoBehaviour {
 	public float jumpForce = 600f;
 	public Rigidbody rb;
 
+	public AudioClip tornadoSound;
+
+	public static GameObject tornado;
+
 	public bool grounded = true;
 
 	// Use this for initialization
@@ -29,6 +33,8 @@ public class movement : MonoBehaviour {
 		if (Input.GetButtonDown ("Jump")) {
 			if(grounded){
 				rb.AddRelativeForce(transform.up * jumpForce);
+
+				//transform.Rotate( Vector3.up, 90, Space.Self);
 			} 
 		}
 
@@ -45,5 +51,18 @@ public class movement : MonoBehaviour {
 			rb.AddRelativeForce(transform.up * (-5f));
 		}
 
+
+		//SHOOTING
+		if (Input.GetButtonDown ("Fire1") && tornado == null) {
+			tornado = Instantiate(Resources.Load("Prefabs/Tornado"), transform.position + new Vector3(3, 0, 0), Quaternion.Euler(Vector3.up)) as GameObject;
+			AudioSource.PlayClipAtPoint (tornadoSound, transform.position);
+
+			Invoke("DestroyTornado", 10);
+		}
+
+	}
+
+	void DestroyTornado(){
+		Destroy (tornado);
 	}
 }

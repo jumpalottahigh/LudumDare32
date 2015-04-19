@@ -32,6 +32,7 @@ GameObject:
   - 124: {fileID: 12480870}
   - 92: {fileID: 9262972}
   - 81: {fileID: 8197906}
+  - 114: {fileID: 11467258}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -106,7 +107,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 43d488d7dfb803b478989a150c8293b9, type: 2}
+  - {fileID: 2100000, guid: 832dca42754f53e40975380f1999849a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -126,7 +127,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137264}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: bf89504d4a871d04bb18cc242edc85ed, type: 3}
 --- !u!54 &5404610
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -156,6 +157,18 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146996}
   m_Enabled: 1
+--- !u!114 &11467258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33116186ff48b724e92ba86af693d8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tornadoUp: {fileID: 2800000, guid: 3b41335525d90b848bc363900d037057, type: 3}
 --- !u!114 &11491978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,6 +183,7 @@ MonoBehaviour:
   speed: 10
   jumpForce: 600
   rb: {fileID: 0}
+  tornadoSound: {fileID: 8300000, guid: e94e2fbe354ada449bc4427d47a7c987, type: 3}
   grounded: 1
 --- !u!124 &12480870
 Behaviour:
@@ -188,7 +202,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .5
-  m_Height: 2
+  m_Height: 2.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
